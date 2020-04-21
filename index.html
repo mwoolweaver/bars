@@ -16,16 +16,6 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="manifest" href="img/favicons/manifest.json">
-    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#367fa9">
-    <link rel="shortcut icon" href="img/favicons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#367fa9">
-    <meta name="msapplication-TileImage" content="img/favicons/mstile-150x150.png">
-    <meta name="theme-color" content="#367fa9">
-
     <link rel="stylesheet" href="style/vendor/SourceSansPro/SourceSansPro.css">
     <link rel="stylesheet" href="style/vendor/bootstrap/css/bootstrap.min.css">
 
@@ -52,3 +42,95 @@
     <script src="scripts/vendor/dataTables.bootstrap.min.js"></script>
     <script src="scripts/vendor/Chart.bundle.min.js"></script>
 </head>
+
+    <body class="skin-blue sidebar-mini layout-boxed">
+ <noscript>
+<!-- JS Warning -->
+<div>
+    <input type="checkbox" id="js-hide">
+    <div class="js-warn" id="js-warn-exit"><h1>JavaScript Is Disabled</h1><p>JavaScript is required for the site to function.</p>
+        <p>To learn how to enable JavaScript click <a href="https://www.enable-javascript.com/" rel="noopener" target="_blank">here</a></p><label for="js-hide">Close</label>
+    </div>
+</div>
+<!-- /JS Warning -->
+ </noscript>
+        
+        
+ <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Main content -->
+        <section class="content">
+<!-- Small boxes (Stat box) -->
+<div class="row">
+    <div class="col-lg-3 col-sm-6">
+        <!-- small box -->
+        <div class="small-box bg-green" id="total_queries" title="only A + AAAA queries">
+            <div class="inner">
+                <p>Total queries (<span id="unique_clients">-</span> clients)</p>
+                <h3 class="statistic"><span id="dns_queries_today">---</span></h3>
+            </div>
+            <div class="icon">
+                <i class="fas fa-globe-americas"></i>
+            </div>
+        </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-lg-3 col-sm-6">
+        <!-- small box -->
+        <div class="small-box bg-aqua">
+            <div class="inner">
+                <p>Queries Blocked</p>
+                <h3 class="statistic"><span id="ads_blocked_today">---</span></h3>
+            </div>
+            <div class="icon">
+                <i class="fas fa-hand-paper"></i>
+            </div>
+        </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-lg-3 col-sm-6">
+        <!-- small box -->
+        <div class="small-box bg-yellow">
+            <div class="inner">
+                <p>Percent Blocked</p>
+                <h3 class="statistic"><span id="ads_percentage_today">---</span></h3>
+            </div>
+            <div class="icon">
+                <i class="fas fa-chart-pie"></i>
+            </div>
+        </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-lg-3 col-sm-6">
+        <!-- small box -->
+        <div class="small-box bg-red" title="Blocking list updated 13:17 (hh:mm) ago">
+            <div class="inner">
+                <p>Domains on Blocklist</p>
+                <h3 class="statistic"><span id="domains_being_blocked">---</span></h3>
+            </div>
+            <div class="icon">
+                <i class="fas fa-list-alt"></i>
+            </div>
+        </div>
+    </div>
+    <!-- ./col -->
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+    <div class="box" id="queries-over-time">
+        <div class="box-header with-border">
+          <h3 class="box-title">Total queries over last 24 hours</h3>
+        </div>
+        <div class="box-body">
+          <div class="chart">
+            <canvas id="queryOverTimeChart" width="800" height="140"></canvas>
+          </div>
+        </div>
+        <div class="overlay">
+          <i class="fa fa-sync fa-spin"></i>
+        </div>
+        <!-- /.box-body -->
+      </div>
+    </div>
+</div>
